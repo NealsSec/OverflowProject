@@ -36,11 +36,12 @@ void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *co
     {"alphabet"   , optional_argument, NULL, 'a'},
     {"count"      , required_argument, NULL, 'c'},
     {"letter"     , required_argument, NULL, 'l'},
+    {"help"       , no_argument,       NULL, 'h'},
     {NULL, 0, NULL, 0}
   };
 
   // This is the beginning of the getopt argument parser
-  while ( (c = getopt_long (argc, argv, "a::c:l:", long_options, NULL)) != -1)
+  while ( (c = getopt_long (argc, argv, "a::c:l:h", long_options, NULL)) != -1)
   {
     switch (c)
     {
@@ -68,7 +69,11 @@ void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *co
 
       // This case defines the character that will be printed unless alphabet is set
       case 'l':
-		strncpy(letter, optarg, 1);
+		    strncpy(letter, optarg, 1);
+        break;
+
+      case 'h':
+        usage();
         break;
 
       // This case is a catch all in case user gives invalid argument

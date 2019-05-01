@@ -17,8 +17,8 @@ int main(int argc, char ** argv)
            argv,
            ptr_alphabet,
            ptr_alphabetCount,
-		   ptr_count,
-		   letter);
+		       ptr_count,
+		       letter);
 
   /* PROGRAM BEGINS HERE */
 
