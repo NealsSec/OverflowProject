@@ -15,11 +15,11 @@ The -c argument is required\n\
     is printed or where the alphabet begins\n\n\
 -h, --help\n\
 	displays this menu\n\n");
-	
+
   exit(1); // This kills the program early because invalid options were supplied
 }
 
-void setFlags(int argc, char **argv, bool *alphabet,int *alphabetCount, int *count, char letter[2])
+void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *count, char letter[2])
 {
   // This if statement prints usage information in the case that runs the program without args or without -c
   if (argc == 1 || count == 0 || alphabetCount == 0)
@@ -79,7 +79,7 @@ void setFlags(int argc, char **argv, bool *alphabet,int *alphabetCount, int *cou
 }
 
 // This function builds a string based on letter for start and count for length and outputs without newline
-int printAlphabet(int length, char character[2], int alphabetInterval)
+int printAlphabet(int length, char character[], int alphabetInterval)
 {
   int iterator;
 
@@ -94,16 +94,15 @@ int printAlphabet(int length, char character[2], int alphabetInterval)
   return iterator;
 }
 
-// This function builds a string based on letter and count and outputs it without a newline
+/* Basic statement to build a null terminated string */
 int printString(int length, char character[2])
 {
-  // Basic loop to build output given length
-  int iterator;
+  char *stringBuffer = malloc(length + 1);    // Allocates space for string in heap
+  memset(stringBuffer, character[0], length); // Builds string
+  memset(stringBuffer + length, '\0', 1);     // Null terminates string
+  printf("%s", stringBuffer);                 // Prints strings
 
-  for (iterator = 0; iterator < length; iterator++)
-  {
-    printf("%s", character);
-  }
+  free(stringBuffer);                         // Frees allocated space
 
-  return iterator; // return chars printed
+  return 0; // return 0 for now
 }

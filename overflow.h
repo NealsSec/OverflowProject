@@ -10,7 +10,7 @@
 #include <string.h>
 
 void usage();
-void setFlags(int, char **, bool *,int *, int *, char [2]);
+void setFlags(int, char **, bool *,int *, int *, char *);
 int printAlphabet(int, char[], int);
 int printString(int, char[]);
 
