@@ -21,16 +21,26 @@ int main(int argc, char ** argv)
 		       &letter);
 
   /* PROGRAM BEGINS HERE */
+  char *mainBuffer = malloc(alphabetCount + 1); // This sets up the buffer for the string to be built
 
   // If the alphabet argument is set then the program will print alphabetically
   if (alphabet == true)
   {
-    printAlphabet(count, &letter, alphabetCount);
+    printAlphabet(count, &letter, alphabetCount, mainBuffer);
   }
   else
   {
-    printString(count, &letter);
+    printString(count, &letter, mainBuffer);
   }
+
+  /*
+      Later on in development this is where the function for addresses will be added 
+  */
+
+  memset(mainBuffer + count, '\0', 1);  // Null terminate string in buffer
+
+  printf("%s", mainBuffer);             // Print the created string from buffer
+  free(mainBuffer);                     // Free allocated memory for string
 
   printf("\n"); // Terminate the string built previously with a new line
 

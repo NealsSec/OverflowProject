@@ -3,8 +3,7 @@
 ======================================================
 The end goal of this project is to include a function
 that allows a user to append addresses to the end of
-a built string, this would likely require a rework of
-current architecture
+a built string so I need to work towards that
 
 I want to alter this program to be compilable easily
 with make

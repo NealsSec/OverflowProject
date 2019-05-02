@@ -85,10 +85,9 @@ void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *co
 }
 
 /* This function builds a string based on letter for start and count for length and outputs without newline */
-int printAlphabet(int length, char character[], int alphabetInterval)
+int printAlphabet(int length, char character[], int alphabetInterval, char *stringBuffer)
 {
   int sum; // Init iterator outside of loop so it can be returned
-  char *stringBuffer = malloc(length + 1); // Allocate space for string on heap
 
   /* This for loop actually builds the string */
   for (sum = 0; sum < length; sum += alphabetInterval)
@@ -106,23 +105,13 @@ int printAlphabet(int length, char character[], int alphabetInterval)
       memset(stringBuffer + sum, character[0], (length - sum));   // Add remaining characters
     }
   }
-  memset(stringBuffer + length, '\0', 1);                         // Null terminate string in buffer
-
-  printf("%s", stringBuffer); // Print the created string from buffer
-  free(stringBuffer);         // Free allocated memory for string
-
   return sum;                 // Return number of characters printed
 }
 
 /* Basic function to build a null terminated string */
-int printString(int length, char character[2])
+int printString(int length, char character[2], char *stringBuffer)
 {
-  char *stringBuffer = malloc(length + 1);    // Allocates space for string in heap
   memset(stringBuffer, character[0], length); // Builds string
-  memset(stringBuffer + length, '\0', 1);     // Null terminates string
-  printf("%s", stringBuffer);                 // Prints strings
-
-  free(stringBuffer);                         // Frees allocated space
 
   return 0; // return 0 for now
 }
