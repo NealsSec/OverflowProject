@@ -1,9 +1,9 @@
 ======================================================
      PLANNING
 ======================================================
-Top priority is converting the alphabet function into
-a function that uses memset instead of simply printing
-everything one at a time
+Next I want to convert the main string builder functions
+to use a char * for the character values just for
+standardization.
 
 I need to change the help page and add a help option
 to the argument list
