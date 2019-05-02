@@ -1,9 +1,13 @@
 ======================================================
      PLANNING
 ======================================================
-Next I want to convert the main string builder functions
-to use a char * for the character values just for
-standardization.
+The end goal of this project is to include a function
+that allows a user to append addresses to the end of
+a built string, this would likely require a rework of
+current architecture
+
+I want to alter this program to be compilable easily
+with make
 
 I need to change the help page and add a help option
 to the argument list

@@ -1,6 +1,6 @@
 #include "overflow.h"
 
-// This function will print out usage info for users
+/* This function will print out usage info for users */
 void usage()
 {
   printf(\
@@ -19,6 +19,7 @@ The -c argument is required\n\
   exit(1); // This kills the program early because invalid options were supplied
 }
 
+/* This function parses all arguments supplied and sets flags accordingly */
 void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *count, char letter[2])
 {
   // This if statement prints usage information in the case that runs the program without args or without -c
@@ -83,7 +84,7 @@ void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *co
   }
 }
 
-// This function builds a string based on letter for start and count for length and outputs without newline
+/* This function builds a string based on letter for start and count for length and outputs without newline */
 int printAlphabet(int length, char character[], int alphabetInterval)
 {
   int sum; // Init iterator outside of loop so it can be returned
@@ -113,7 +114,7 @@ int printAlphabet(int length, char character[], int alphabetInterval)
   return sum;                 // Return number of characters printed
 }
 
-/* Basic statement to build a null terminated string */
+/* Basic function to build a null terminated string */
 int printString(int length, char character[2])
 {
   char *stringBuffer = malloc(length + 1);    // Allocates space for string in heap
