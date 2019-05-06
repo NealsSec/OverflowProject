@@ -35,8 +35,6 @@ void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *co
     {NULL, 0, NULL, 0}
   };
 
-  bool countSet = false; // This flag is set by count arg and will not allow the program to run if not true
-
   // This is the beginning of the getopt argument parser
   while ( (c = getopt_long (argc, argv, "a::c:l:h", long_options, NULL)) != -1)
   {
@@ -56,7 +54,6 @@ void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *co
 
       // This case defines how many characters to print
       case 'c':
-        countSet = true; // Sets flag to true to allow the rest of the program to run
         if ((*count = atoi(optarg)) == 0) // I think this could create bugs because of assignment
         {
           printf("Chars requires a whole number above 0 ONLY\n");
@@ -81,7 +78,7 @@ void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *co
   }
 
   // This if statement prints usage information in the case that runs the program without args or without -c
-  if (countSet == false || alphabetCount == 0)
+  if (!*count || alphabetCount == 0)
   {
     usage();
   }
