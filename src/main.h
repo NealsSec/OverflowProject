@@ -6,5 +6,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include "overflow.h"
+#include "usage.h"
+#include "arguments.h"
 
 #endif
