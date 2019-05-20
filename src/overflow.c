@@ -7,7 +7,7 @@ void usage()
     "------------OVERFLOWING PROJECT HELP PAGE------------\n\n\
 The -c argument is required\n\
 \n\
--a, --alphabet, this sets a flag which prints\n\
+-a, --alphabet=, this sets a flag which prints\n\
     an alphabet instead of a single character\n\n\
 -c, --count, this defines how many characters\n\
     will be printed or how long the alphabet will be\n\n\
