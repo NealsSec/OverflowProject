@@ -13,8 +13,7 @@ The -c argument is required\n\
     will be printed or how long the alphabet will be\n\n\
 -l, --letter, this defines the character that\n\
     is printed or where the alphabet begins\n\n\
--h, --help\n\
-	displays this menu\n\n");
+-h, --help, displays this menu\n\n");
 
   exit(1); // This kills the program early because invalid options were supplied
 }
