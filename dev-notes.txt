@@ -5,17 +5,8 @@ The end goal of this project is to include a function
 that allows a user to append addresses to the end of
 a built string so I need to work towards that
 
-I want to alter this program to be compilable easily
-with make
-
-I need to change the help page and add a help option
-to the argument list
-
 For alphabet functions it may be a good idea to
 rollover the character after several iterations
-
-Consider changing several of the functions to accept
-pointers
 */
 
 ======================================================
