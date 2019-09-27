@@ -12,7 +12,7 @@ int main(int argc, char ** argv)
   bool alphabet      = false; // If this flag is set then output will be organized as an alphabet so AAAABBBB...
   int  alphabetCount = 4;     // This var holds the interval at which the character is incremented for alphabet flag
   int  count         = 0;     // This var is required to be set, it determines how long output will be
-  char letter        = 'A'; // This is a sane default for output, 0x41
+  char letter[2]     = "A\n"; // This is a sane default for output, 0x41
 
   // Sets flags in seperate function to keep only keep important logic in main
   setFlags(argc,
@@ -20,7 +20,7 @@ int main(int argc, char ** argv)
            &alphabet,
            &alphabetCount,
 		   &count,
-		   &letter);
+		   letter);
 
   /* PROGRAM BEGINS HERE */
   char *mainBuffer = calloc(count + 1, sizeof(char)); // This sets up the buffer for the string to be built
@@ -28,11 +28,11 @@ int main(int argc, char ** argv)
   // If the alphabet argument is set then the program will print alphabetically
   if (alphabet == true)
   {
-    printAlphabet(count, &letter, alphabetCount, mainBuffer);
+    printAlphabet(count, letter, alphabetCount, mainBuffer);
   }
   else
   {
-    printString(count, &letter, mainBuffer);
+    printString(count, letter, mainBuffer);
   }
 
   /*

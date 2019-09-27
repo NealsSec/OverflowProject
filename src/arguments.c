@@ -16,7 +16,7 @@
 #include <stdlib.h>
 
 /* This function parses all arguments supplied and sets flags accordingly */
-void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *count, char letter[2])
+void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *count, char *letter)
 {
   /* Parse command line options.  */
   char c; // init argument holder
