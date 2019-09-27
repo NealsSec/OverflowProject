@@ -2,7 +2,17 @@
 #ifndef ARGUMENTS_H_
 #define ARGUMENTS_H_
 
-#include "getopt.h" // I changed this to "" to give a local file priority over the lib in Visual Studio
+/* If compiled on Windows it will use a packed in library if on Linux it will use Included*/
+#if defined(_WIN32)
+#include "getopt.h"
+#endif
+
+#if defined(__linux__)
+#include <getopt.h>
+#endif
+
+#include "usage.h"
+
 #include <stdbool.h>
 #include <stdio.h> 
 #include <string.h> 
