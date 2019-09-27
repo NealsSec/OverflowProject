@@ -1,7 +1,10 @@
 #include "main.h"
-
+#include "arguments.h"
 #include "overflow.h"
-//#include "arguments.h"
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 int main(int argc, char ** argv)
 {

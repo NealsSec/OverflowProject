@@ -1,4 +1,5 @@
 #include "overflow.h"
+#include <string.h>
 
 /* This function builds a string based on letter for start and count for length and outputs without newline */
 int printAlphabet(int length, char character[], int alphabetInterval, char *stringBuffer)
