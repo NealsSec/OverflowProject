@@ -17,3 +17,8 @@ pointer.
 * -l / --letter   Sets a variable to an supplied character, the default if this
                 argument is not supplied is 'A' as is tradition
 * -h / --help     Simply prints this usage section
+
+## Build Instructions
+On Linux systems it should me as simple as using make.
+
+On Windows systems there are plans to implement a Cmake system for easy compilation.
