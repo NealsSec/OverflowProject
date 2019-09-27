@@ -1,5 +1,9 @@
 #include "main.h"
 
+#include "overflow.h"
+#include "usage.h"
+//#include "arguments.h"
+
 int main(int argc, char ** argv)
 {
   /* INIT FLAGS */
@@ -8,17 +12,13 @@ int main(int argc, char ** argv)
   int  count         = 0;     // This var is required to be set, it determines how long output will be
   char letter        = 'A'; // This is a sane default for output, 0x41
 
-  bool *ptr_alphabet      = &alphabet;
-  int  *ptr_alphabetCount = &alphabetCount;
-  int  *ptr_count         = &count;
-
   // Sets flags in seperate function to keep only keep important logic in main
   setFlags(argc,
            argv,
-           ptr_alphabet,
-           ptr_alphabetCount,
-		       ptr_count,
-		       &letter);
+           &alphabet,
+           &alphabetCount,
+		   &count,
+		   &letter);
 
   /* PROGRAM BEGINS HERE */
   char *mainBuffer = calloc(count + 1, sizeof(char)); // This sets up the buffer for the string to be built
