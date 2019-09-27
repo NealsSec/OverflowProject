@@ -12,7 +12,7 @@ int main(int argc, char ** argv)
   bool alphabet      = false; // If this flag is set then output will be organized as an alphabet so AAAABBBB...
   int  alphabetCount = 4;     // This var holds the interval at which the character is incremented for alphabet flag
   int  count         = 0;     // This var is required to be set, it determines how long output will be
-  char letter[2]     = "A\n"; // This is a sane default for output, 0x41
+  char letter[2]     = "A\n"; // This is a sane NULL TERMINATED default char for output, 0x41
 
   // Sets flags in seperate function to keep only keep important logic in main
   setFlags(argc,
