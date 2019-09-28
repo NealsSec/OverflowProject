@@ -19,6 +19,8 @@ pointer.
 * -h / --help     Simply prints this usage section
 
 ## Build Instructions
-On Linux systems it should me as simple as using make.
+On Linux and Windows Systems simply use the following commands from the root of the project
 
-On Windows systems there are plans to implement a Cmake system for easy compilation.
+		cd build
+		cmake ..
+		make
