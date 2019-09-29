@@ -7,9 +7,9 @@
 #include <string.h>
 
 /* This function builds a string based on letter for start and count for length and outputs without newline */
-char * printAlphabet(int length, char character, int alphabetInterval);
+int printAlphabet(int length, char character, int alphabetInterval, char *buff);
 
 /* Basic function to build a null terminated string */
-char * printString(int length, char character);
+int printString(int length, char character, char *buff);
 
 #endif

@@ -9,6 +9,7 @@ int main(int argc, char ** argv)
   char letter        = 'A';   // default char for output, 0x41
 
   char *mainString;
+  mainString = calloc(count + 1, sizeof(char));
 
   /* Sets flags in seperate function to keep only keep important logic in main */
   setFlags(argc,
@@ -21,11 +22,11 @@ int main(int argc, char ** argv)
   // If the alphabet argument is set then the program will print alphabetically
   if (alphabet == true)
   {
-    mainString = printAlphabet(count, letter, alphabetCount);
+    printAlphabet(count, letter, alphabetCount, mainString);
   }
   else
   {
-    mainString = printString(count, letter);
+    printString(count, letter, mainString);
   }
 
   /*
