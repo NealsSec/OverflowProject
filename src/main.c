@@ -1,4 +1,10 @@
 #include "main.h"
+#include "arguments.h"
+#include "overflow.h"
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
 int main(int argc, char ** argv)
 {
@@ -13,11 +19,11 @@ int main(int argc, char ** argv)
 
   /* Sets flags in seperate function to keep only keep important logic in main */
   setFlags(argc,
-            argv,
-            &alphabet,
-            &alphabetCount,
-            &count,
-            &letter);
+           argv,
+           &alphabet,
+           &alphabetCount,
+           &count,
+           &letter);
 
   // If the alphabet argument is set then the program will print alphabetically
   if (alphabet == true)

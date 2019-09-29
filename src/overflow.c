@@ -1,5 +1,9 @@
 #include "overflow.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /* This function builds a string based on letter for start and count for length and outputs without newline */
 int printAlphabet(int length, char character, int alphabetCount, char *buff)
 {
@@ -10,13 +14,10 @@ int printAlphabet(int length, char character, int alphabetCount, char *buff)
 
 	int i;
 	int j;
-	int sum;
-	int interval;
-
 	/* num of cycles to go through to add character n times and increase character */
-	interval = length / alphabetCount;
+	int interval = length / alphabetCount;
 	/* total of characters added to the buffer */
-	sum = 0;
+	int sum = 0;
 
 	/* in intervals of alphabetCount we add 4 of each letter to the buffer */
 	for(i = 0; i < interval; i++)
