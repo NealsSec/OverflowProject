@@ -19,8 +19,10 @@ int printAlphabet(int length, char character, int alphabetCount, char *buff)
 	sum = 0;
 
 	/* in intervals of alphabetCount we add 4 of each letter to the buffer */
-	for(i = 0; i < interval; i++){
-		for(j = 0; j < alphabetCount; j++){
+	for(i = 0; i < interval; i++)
+	{
+		for(j = 0; j < alphabetCount; j++)
+		{
 			buff[ (i * alphabetCount) + j] = character;
 			sum++;
 		}
@@ -28,7 +30,8 @@ int printAlphabet(int length, char character, int alphabetCount, char *buff)
 	}
 
 	/* fills the rest of the buffer */
-	for(i = sum ; i < length; i++){
+	for(i = sum ; i < length; i++)
+	{
 		buff[i] = character;
 		sum++;
 	}
