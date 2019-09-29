@@ -19,8 +19,13 @@ pointer.
 * -h / --help     Simply prints this usage section
 
 ## Build Instructions
-On Linux and Windows Systems simply use the following commands from the root of the project
+On Linux and Windows Systems simply use the following commands
 
-		cd build
-		cmake ..
-		make
+	git clone https://github.com/NealsSec/OverflowProject.git
+	cd Overflowproject
+	mkdir build
+	cd build
+	cmake ..
+	cmake --build .
+
+		
