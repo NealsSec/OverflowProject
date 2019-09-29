@@ -1,6 +1,4 @@
-#include "usage.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include <usage.h>
 
 /* This function will print out usage info for users */
 void usage()

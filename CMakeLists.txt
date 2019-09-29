@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.15)
-project(Overflow)
+cmake_minimum_required(VERSION 3.0)
+project(Overflow C)
 
 include_directories(include)
 
