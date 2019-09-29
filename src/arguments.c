@@ -1,4 +1,4 @@
-#include <arguments.h>
+#include "arguments.h"
 
 /* This function parses all arguments supplied and sets flags accordingly */
 void setFlags(int argc, char **argv, bool *alphabet, int *alphabetCount, int *count, char *letter)
