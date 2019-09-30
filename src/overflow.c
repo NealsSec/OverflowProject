@@ -1,7 +1,5 @@
 #include "overflow.h"
 
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 /* This function builds a string based on letter for start and count for length and outputs without newline */

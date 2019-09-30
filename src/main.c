@@ -14,7 +14,7 @@ int main(int argc, char ** argv)
   int  count         = 0;     // This var is required to be set, it determines how long output will be
   char letter        = 'A';   // default char for output, 0x41
 
-  /* Sets flags in seperate function to keep only keep important logic in main */
+  /* Sets flags in separate function to keep only keep important logic in main */
   setFlags(argc,
            argv,
            &alphabet,
